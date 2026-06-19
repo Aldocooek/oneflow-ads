@@ -96,13 +96,15 @@ Drž **Value Equation**: *(Dream Outcome × Perceived Likelihood) ÷ (Time Delay
 - **Proof = zabij námitku**: vysvětlitelnost (`proč`, ne černá skříňka) + člověk rozhoduje (`0` auto-odeslání) + skóre z 5 signálů.
 - **Slovní limit**: krátké, úderné. Headline pár slov. Žádné odstavce. Žádná klišé. **Žádná strojová čeština** — musí znít nativně a prémiově. Vyhni se poetické antitéze „X, ne Y" jako berličce.
 
+**TÓN — horní tier (UHNW / velké fondy / privátní bankovnictví).** Mluv jazykem kapitálu, ne SaaSu: **mandát, alokace, kapitál, vztah, principal, schůzka**. Sázky zvyšuj **zdrženlivostí, ne křikem** — žádná hlučná čísla typu „ušetři 10 hodin", žádné vykřičníky, žádný hype. Tihle kupci reagují na **přesnost, status a diskrétnost**. Stáhni zisk na jedno silné podstatné jméno (např. **mandát**) a to dej do highlight pillu.
+
 ---
 
 ## 8) 5 variant — úhly (každá Hormozi-maxed, česky)
 
 | # | Úhel | Jádro sdělení |
 |---|------|----------------|
-| 1 | **Čas partnera / zmeškaná velryba** | „Vztah, který měl uzavřít, vychladl." → ráno víš, který se **uzavře**, a proč. (baseline úhel, ale vylepšený) |
+| 1 | **Hodina principala / zmeškaný mandát** | „Největší vztah roku vychladl. Přišel na řadu pozdě." → ráno víš, který vztah nese **mandát**, a proč. (= aktuální baseline, ten překonej) |
 | 2 | **Záplava dealů, nula signálu** | „CRM plný jmen. Signál nula." → jeden pořadník, který vztah **zavře**. |
 | 3 | **Diskrétnost / důvěra** | „K vašemu LP nikdy nenapíše bot." → člověk rozhoduje, **0** odejde bez vás. |
 | 4 | **Vysvětlitelnost** | „Skóre bez důvodu nikdo nepodepíše." → **doporučení s důvodem**, ne černá skříňka. |
