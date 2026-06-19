@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* colors + weights sampled from live oneflow.cz / offer.oneflow.cz */
+  :root{
+    --bg:#0A0A0C; --bg-2:#0C0C0E; --bg-3:#080809;
+    --ink:#EBEBEB;        /* hope / gain / answer */
+    --ink-2:#A8A6A3;      /* proof body */
+    --dim:#6A6A6C;        /* dull "before" state */
+    --muted:#56565A;      /* labels */
+    --line:rgba(255,255,255,0.11);
+    --m:80px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px}
+  body{
+    font-family:'Inter Tight',system-ui,sans-serif;
+    background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 58%,var(--bg-3) 100%);
+    color:var(--ink);-webkit-font-smoothing:antialiased;overflow:hidden;
+  }
+  .frame{height:1350px;padding:var(--m);display:flex;flex-direction:column}
+
+  .top{flex-shrink:0;display:flex;align-items:center;justify-content:space-between}
+  .logo svg{width:158px;height:auto;display:block}
+  .brand{font-size:23px;font-weight:600;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--muted)}
+
+  .mid{flex:1;display:flex;flex-direction:column;justify-content:center}
+  /* Hormozi avatar callout — names the senior buyer, not an SDR */
+  .kicker{display:inline-flex;align-self:flex-start;align-items:center;gap:12px;
+    font-size:24px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);
+    border:1px solid var(--line);border-radius:999px;padding:13px 22px;margin-bottom:48px}
+  .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--ink)}
+  /* before: pain — the missed whale */
+  .pain{font-size:48px;font-weight:600;line-height:1.12;letter-spacing:-0.015em;color:var(--dim)}
+  /* after: gain — the message, bright + huge */
+  .gain{margin-top:30px;font-size:84px;font-weight:700;line-height:1.05;
+    letter-spacing:-0.035em;color:var(--ink)}
+  .hl{background:var(--ink);color:#0A0A0C;border-radius:10px;padding:.02em .12em;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+  /* structured proof band — prioritization · explainability · discretion */
+  .proof{flex-shrink:0;border-top:1px solid var(--line);padding-top:44px;
+    display:grid;grid-template-columns:auto 1fr 1fr;gap:0}
+  .cell{padding:0 38px;display:flex;align-items:center;gap:26px}
+  .cell:first-child{padding-left:0}
+  .cell + .cell{border-left:1px solid var(--line)}
+  .ring{position:relative;width:128px;height:128px;flex-shrink:0}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ring .c .n{font-size:48px;font-weight:700;line-height:1;letter-spacing:-0.02em;
+    font-variant-numeric:tabular-nums;color:var(--ink)}
+  .ring .c .l{margin-top:2px;font-size:17px;font-weight:600;letter-spacing:0.12em;color:var(--muted)}
+  .big{font-size:64px;font-weight:700;line-height:0.9;letter-spacing:-0.02em;color:var(--ink);flex-shrink:0}
+  .lab{font-size:25px;font-weight:400;line-height:1.28;color:var(--ink-2)}
+  .lab b{color:var(--ink);font-weight:600}
+</style>
+</head>
+<body>
+  <div class="frame">
+
+    <div class="top">
+      <div class="logo">
+        <svg viewBox="0 0 163 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9778 0C23.1987 0 23.4189 0.00268812 23.6385 0.00796051V3.56631H23.6421C23.8474 18.3042 32.9459 30.9722 46 36.8111C45.8171 37.1443 45.6267 37.473 45.4289 37.797L40.5675 35.0785L40.5306 35.1394C27.9107 29.0371 13.2713 30.1977 2.04112 37.2308L0.6519 38C0.425123 37.6363 0.207878 37.2666 0 36.8912L1.14508 36.2542C13.5592 30.1925 22.1145 17.8522 22.3135 3.56631H22.3171V0.00796051C22.5367 0.00268812 22.7569 0 22.9778 0Z" fill="white"></path>
+          <path d="M66.2285 28.2441C64.6416 28.2441 63.2134 27.8739 61.9438 27.1333C60.6825 26.3927 59.6855 25.3267 58.9531 23.9351C58.2288 22.5435 57.8667 20.8711 57.8667 18.918C57.8667 16.9567 58.2288 15.2803 58.9531 13.8887C59.6855 12.4889 60.6825 11.4188 61.9438 10.6782C63.2134 9.93766 64.6416 9.56738 66.2285 9.56738C67.8236 9.56738 69.2477 9.93766 70.501 10.6782C71.7542 11.4188 72.7471 12.4889 73.4795 13.8887C74.2119 15.2803 74.5781 16.9567 74.5781 18.918C74.5781 20.8711 74.2119 22.5435 73.4795 23.9351C72.7471 25.3267 71.7542 26.3927 70.501 27.1333C69.2477 27.8739 67.8236 28.2441 66.2285 28.2441ZM66.2285 25.29C67.2132 25.29 68.084 25.0459 68.8408 24.5576C69.5977 24.0693 70.1917 23.3532 70.623 22.4092C71.0544 21.457 71.27 20.2933 71.27 18.918C71.27 17.5345 71.0544 16.3667 70.623 15.4146C70.1917 14.4624 69.5977 13.7422 68.8408 13.2539C68.084 12.7656 67.2132 12.5215 66.2285 12.5215C65.2438 12.5215 64.369 12.7656 63.604 13.2539C62.8472 13.7422 62.2531 14.4624 61.8218 15.4146C61.3905 16.3667 61.1748 17.5345 61.1748 18.918C61.1748 20.2933 61.3905 21.457 61.8218 22.4092C62.2531 23.3532 62.8472 24.0693 63.604 24.5576C64.369 25.0459 65.2438 25.29 66.2285 25.29ZM79.8271 20.0166V28H76.6167V14.3525H79.7661V16.6841H79.9248C80.234 15.9191 80.7183 15.3128 81.3774 14.8652C82.0448 14.4095 82.8911 14.1816 83.9165 14.1816C84.8605 14.1816 85.6825 14.381 86.3823 14.7798C87.0822 15.1785 87.6234 15.7645 88.0059 16.5376C88.3965 17.3026 88.5918 18.2303 88.5918 19.3208V28H85.3813V19.8213C85.3813 18.9098 85.1453 18.1978 84.6733 17.6851C84.2013 17.1642 83.5503 16.9038 82.7202 16.9038C82.1587 16.9038 81.6582 17.0259 81.2188 17.27C80.7874 17.5142 80.4456 17.8682 80.1934 18.332C79.9492 18.7878 79.8271 19.3493 79.8271 20.0166ZM97.0146 28.2686C95.6475 28.2686 94.4674 27.9837 93.4746 27.4141C92.4818 26.8363 91.7168 26.0225 91.1797 24.9727C90.6507 23.9229 90.3862 22.6859 90.3862 21.2617C90.3862 19.8538 90.6507 18.6209 91.1797 17.563C91.7087 16.4969 92.4533 15.6668 93.4136 15.0728C94.3739 14.4787 95.505 14.1816 96.8071 14.1816C97.6453 14.1816 98.4388 14.3159 99.1875 14.5845C99.9443 14.853 100.612 15.2681 101.189 15.8296C101.775 16.3911 102.235 17.1073 102.569 17.978C102.903 18.8407 103.069 19.8701 103.069 21.0664V22.0674H91.8877V19.9067H101.47L99.9688 20.5415C99.9688 19.7684 99.8507 19.097 99.6147 18.5273C99.3787 17.9495 99.0288 17.4979 98.5649 17.1724C98.1011 16.8468 97.5233 16.6841 96.8315 16.6841C96.1398 16.6841 95.5498 16.8468 95.0615 17.1724C94.5732 17.4979 94.203 17.9373 93.9507 18.4907C93.6984 19.036 93.5723 19.6463 93.5723 20.3218V21.8232C93.5723 22.6533 93.7147 23.3654 93.9995 23.9595C94.2925 24.5454 94.6994 24.993 95.2202 25.3022C95.7492 25.6115 96.3636 25.7661 97.0635 25.7661C97.5192 25.7661 97.9342 25.701 98.3086 25.5708C98.6911 25.4406 99.0166 25.2453 99.2852 24.9849C99.5618 24.7163 99.7734 24.3867 99.9199 23.9961L102.923 24.3501C102.728 25.1395 102.365 25.8312 101.836 26.4253C101.316 27.0112 100.644 27.467 99.8223 27.7925C99.0085 28.1099 98.0726 28.2686 97.0146 28.2686ZM110.223 28V9.81152H121.893V12.5703H113.519V18.0269H121.075V20.749H113.519V28H110.223ZM127.02 9.81152V28H123.809V9.81152H127.02ZM135.345 28.2686C134.01 28.2686 132.854 27.9756 131.878 27.3896C130.901 26.8037 130.145 25.9818 129.607 24.9238C129.078 23.8659 128.814 22.637 128.814 21.2373C128.814 19.8294 129.078 18.5965 129.607 17.5386C130.145 16.4725 130.901 15.6465 131.878 15.0605C132.854 14.4746 134.01 14.1816 135.345 14.1816C136.679 14.1816 137.835 14.4746 138.812 15.0605C139.788 15.6465 140.545 16.4725 141.082 17.5386C141.619 18.5965 141.888 19.8294 141.888 21.2373C141.888 22.637 141.619 23.8659 141.082 24.9238C140.545 25.9818 139.788 26.8037 138.812 27.3896C137.835 27.9756 136.679 28.2686 135.345 28.2686ZM135.345 25.6807C136.085 25.6807 136.696 25.4854 137.176 25.0947C137.656 24.696 138.014 24.1589 138.25 23.4834C138.494 22.8079 138.616 22.0592 138.616 21.2373C138.616 20.3991 138.494 19.6423 138.25 18.9668C138.014 18.2913 137.656 17.7583 137.176 17.3677C136.696 16.9689 136.085 16.7695 135.345 16.7695C134.62 16.7695 134.014 16.9689 133.526 17.3677C133.038 17.7583 132.671 18.2913 132.427 18.9668C132.191 19.6423 132.073 20.3991 132.073 21.2373C132.073 22.0592 132.191 22.8079 132.427 23.4834C132.671 24.1589 133.038 24.696 133.526 25.0947C134.014 25.4854 134.62 25.6807 135.345 25.6807ZM146.111 28L142.254 14.3525H145.525L147.93 23.9473H148.052L150.506 14.3525H153.741L156.194 23.9106H156.316L158.685 14.3525H161.968L158.111 28H154.754L152.19 18.7837H152.02L149.456 28H146.111Z" fill="white"></path>
+        </svg>
+      </div>
+      <div class="brand">Obchodní AI&nbsp;Brain</div>
+    </div>
+
+    <div class="mid">
+      <div class="kicker"><span class="dot"></span>Pro ty, jejichž čas je nejvzácnější kapitál</div>
+      <div class="pain">Vztah, který měl uzavřít, vychladl.<br>Protože se nedostal na řadu.</div>
+      <div class="gain">Ráno víte, který<br>vztah se <span class="hl">uzavře</span>.<br>A&nbsp;proč právě ten.</div>
+    </div>
+
+    <div class="proof">
+      <div class="cell">
+        <div class="ring">
+          <svg width="128" height="128" viewBox="0 0 128 128">
+            <circle cx="64" cy="64" r="54" fill="none" stroke="rgba(255,255,255,0.11)" stroke-width="7"/>
+            <circle cx="64" cy="64" r="54" fill="none" stroke="#EBEBEB" stroke-width="7"
+              stroke-linecap="round" stroke-dasharray="285 339.3"/>
+          </svg>
+          <div class="c"><span class="n">84</span><span class="l">SKÓRE</span></div>
+        </div>
+        <div class="lab">z 5&nbsp;signálů<br><b>vztahu</b></div>
+      </div>
+      <div class="cell">
+        <div class="big">proč</div>
+        <div class="lab">u&nbsp;každého<br><b>doporučení</b></div>
+      </div>
+      <div class="cell">
+        <div class="big">0</div>
+        <div class="lab">odejde bez<br><b>vašeho svolení</b></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
